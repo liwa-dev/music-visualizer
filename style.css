@@ -43,14 +43,10 @@ body {
     background-color: #cbcbcb;
 }
 
-
 .input-search input {
-    /* width: 140%; */
     border: none;
     outline: none;
     position: relative;
-    /* left: -30%; */
-    /* margin: 20px; */
     text-align: center;
     border-radius: 8px;
     font-size: 15px;
@@ -124,17 +120,13 @@ body {
     justify-content: center;
     align-items: center;
     padding: 32px;
-
 }
 
 .checkbox {
     display: inline-block;
     position: absolute;
-    /* padding-left: 30px; */
-    /* margin-bottom: 10px; */
     font-size: 10px;
     color: white;
-    /* text-align: center; */
     left: 0px;
     top: 50px;
 }
@@ -151,9 +143,7 @@ body {
 }
 
 .checkbox input {
-    /* position: absolute; */
     opacity: 0;
-    /* cursor: pointer; */
 }
 
 .checkbox label {
@@ -189,7 +179,6 @@ body {
 .checkbox .checkbox-label {
     padding-left: 35px;
 }
-
 
 .checkbox input:checked~label:before {
     transform: scale(1);
@@ -267,7 +256,6 @@ body {
     width: 100%;
     height: 100%;
     z-index: 1;
-    /* filter: blur(1.5px); */
 }
 
 .loop-button {
@@ -304,7 +292,6 @@ body {
     transition: top 1s ease, background-color .3s ease;
 }
 
-
 .effect-button:hover {
     background: #1ED760aa;
 }
@@ -314,18 +301,11 @@ body {
     top: 5%;
 }
 
-
 #effect-button2 {
     position: absolute;
     transition: top 1s ease 0s;
     top: -100%;
 }
-
-
-
-
-
-
 
 .card-row {
     display: flex;
@@ -364,13 +344,11 @@ body {
 
 .card {
     cursor: pointer;
-    /* Existing styles... */
     position: relative;
     flex: 0 0 auto;
     transition: transform 0.3s ease;
     margin-right: 50px;
     width: 200px;
-    /* Adjust the width of each card as needed */
 }
 
 .card img {
@@ -427,7 +405,6 @@ body {
     background-color: #1DB954cc;
 }
 
-
 .notification {
     position: fixed;
     top: 20px;
@@ -437,30 +414,48 @@ body {
     border-radius: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     transition: right 0.3s ease-in-out;
-    font-size: 14px;
-    z-index: 4;
-    color: #333;
 }
 
-.notification.open {
+.notification.show {
     right: 20px;
 }
 
-.message {
-    display: block;
-}
-
-.close {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    color: #777;
-}
-
-.close:hover {
+.notification p {
+    margin: 0;
+    font-size: 14px;
     color: #333;
 }
+
+.notification.error {
+    background-color: #ff6363;
+    color: #fff;
+}
+
+.notification.success {
+    background-color: #66bb6a;
+    color: #fff;
+}
+
+.notification.error p,
+.notification.success p {
+    color: #fff;
+}
+
+
+
+@media only screen and (max-width: 600px) {
+    .window2 {
+        width: 90%;
+        height: 30%;
+    }
+  }
+
+
+
+
+
+
+
+
+
+
