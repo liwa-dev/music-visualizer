@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </link>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <div id="notification" class="notification">
+        <span class="message">This is a notification message.</span>
+    </div>
+    <canvas id="visualizer"></canvas>
+    <div class="bg"></div>
+    <button class="effect-button" id="effect-button2"><i class="fa-solid fa-arrow-down"></i></button>
+    <div class="window2">
+        <div class="title-bar">
+            Panel Search
+        </div>
+        <div class="input-search">
+            <input type="text" placeholder="Song name or url video?" id="url-input">
+
+            <i id="search" class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="card-row">
+        </div>
+
+
+    </div>
+
+    <button class="effect-button" id="effect-button1"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <div class="window">
+        <div class="title-bar">
+            Music Player
+        </div>
+        <div class="content">
+            <div class="music-player">
+                <img id="logo-image" src="https://rare-gallery.com/uploads/posts/583541-sword-art-online.jpg"></img>
+            </div>
+            <div class="controls">
+                <div class="control-button" id="play-button"><i class="fa-solid fa-play" id="play-icon"></i></div>
+                <div class="control-button" id="skip-button"><i class="fa-solid fa-forward-step"></i></div>
+                <div class="control-button loop-button" id="loop-button"><i class="fa-solid fa-rotate-left"></i></div>
+                <div class="checkbox">
+                    <input type="checkbox" id="checkbox" checked />Visualizer (ON/OFF) | L-E-D
+                    <label for="checkbox"></label>
+                </div>
+            </div>
+            <div class="progress-bar">
+                <div class="progress-bar-inner"></div>
+            </div>
+        </div>
+
+    </div>
+    <div id="notification" class="notification">
+        <span class="message"></span>
+        <button class="close" onclick="closeNotification()">&times;</button>
+    </div>
+</body>
+
+
+
+<script src="notification.js"></script>
+<script src="visualizer.js"></script>
+<script src="main.js"></script>
+
+</html>

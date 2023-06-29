@@ -1,0 +1,465 @@
+@font-face {
+    font-family: 'proxima';
+    src: url('fonts/font.otf') format('opentype');
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'proxima', sans-serif;
+    font-weight: 800;
+    overflow: hidden;
+    background: url(imgs/bg2.png);
+}
+
+.input-search {
+    position: absolute;
+    left: 50%;
+    top: 35%;
+    z-index: 1;
+    transform: translate(-50%, 50%);
+    transition: top .5s ease;
+    display: flex;
+    align-items: center;
+}
+
+.input-search input {
+    padding: 8px;
+    width: 300px;
+}
+
+.input-search i {
+    background-color: white;
+    padding: 10px;
+    transition: background-color .5 ease;
+    border-radius: 100%;
+}
+
+.input-search i:hover {
+    cursor: pointer;
+    background-color: #cbcbcb;
+}
+
+
+.input-search input {
+    /* width: 140%; */
+    border: none;
+    outline: none;
+    position: relative;
+    /* left: -30%; */
+    /* margin: 20px; */
+    text-align: center;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.window2 {
+    width: 90%;
+    height: 50%;
+    position: absolute;
+    z-index: 2;
+    top: -50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    user-select: none;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(310px);
+    border-radius: 10px;
+}
+
+.window {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 463px;
+    user-select: none;
+    height: 160px;
+    transition: height .5s ease;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    z-index: 2;
+}
+
+.title-bar {
+    height: 50px;
+    background-color: #101010;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+    color: #fff;
+    font-size: 18px;
+}
+
+.content {
+    flex: 1;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 32px;
+
+}
+
+.checkbox {
+    display: inline-block;
+    position: absolute;
+    /* padding-left: 30px; */
+    /* margin-bottom: 10px; */
+    font-size: 10px;
+    color: white;
+    /* text-align: center; */
+    left: 0px;
+    top: 50px;
+}
+
+.bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('imgs/bg1.png');
+    background-size: cover;
+    z-index: 0;
+}
+
+.checkbox input {
+    /* position: absolute; */
+    opacity: 0;
+    /* cursor: pointer; */
+}
+
+.checkbox label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15px;
+    cursor: pointer;
+    width: 13px;
+    background-color: #ebebeb;
+    border: 2px solid #242424;
+    transition: background-color 0.3s, border-color 0.3s;
+    border-radius: 4px;
+}
+
+.checkbox label:before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 3px;
+    width: 7px;
+    height: 7px;
+    background-color: #1db954;
+    border-radius: 50%;
+    transform: scale(0);
+    transition: transform 0.3s;
+}
+
+.checkbox input:checked~label:before {
+    transform: scale(1);
+}
+
+.checkbox .checkbox-label {
+    padding-left: 35px;
+}
+
+
+.checkbox input:checked~label:before {
+    transform: scale(1);
+}
+
+.music-player {
+    width: 150px;
+    height: 150px;
+    background-color: #ebebeb;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    overflow: hidden;
+    color: #777;
+}
+
+.music-player img {
+    background: red;
+    width: 150%;
+    height: 100%;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.control-button {
+    width: 40px;
+    height: 40px;
+    background-color: #ebebeb;
+    border-radius: 50%;
+    margin: 0 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #777;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.control-button:hover {
+    background-color: #d4d4d4;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #ebebeb;
+    border-radius: 5px;
+    margin-top: 16px;
+    transition: background-color .2s ease;
+}
+
+.progress-bar:hover {
+    background-color: #777;
+}
+
+.progress-bar-inner {
+    height: 100%;
+    background-color: #1db954;
+    border-radius: 2px;
+    width: 0%;
+    transition: width 0.3s ease;
+}
+
+#visualizer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    /* filter: blur(1.5px); */
+}
+
+.loop-button {
+    transition: background-color .5s ease;
+}
+
+.checked {
+    background-color: #1DB954;
+}
+
+.seek-circle {
+    position: relative;
+    transition: left 0.3s ease;
+    top: -120%;
+    left: 0;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #1db954;
+    pointer-events: none;
+    z-index: 1;
+    transform: translateX(-5px);
+}
+
+.effect-button {
+    z-index: 3;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50%;
+    background: #1DB954;
+    color: white;
+    transition: top 1s ease, background-color .3s ease;
+}
+
+
+.effect-button:hover {
+    background: #1ED760aa;
+}
+
+#effect-button1 {
+    position: absolute;
+    top: 5%;
+}
+
+
+#effect-button2 {
+    position: absolute;
+    transition: top 1s ease 0s;
+    top: -100%;
+}
+
+
+
+
+
+
+
+.card-row {
+    display: flex;
+    overflow-x: scroll;
+    scrollbar-width: none;
+    position: relative;
+    background-color: rgba(0, 0, 0, .5);
+    padding: 30px;
+    top: 30%;
+    height: 30%;
+    max-width: 100%;
+    transition: opacity .5s ease;
+    opacity: 0;
+    z-index: 0;
+    -ms-overflow-style: none;
+}
+
+.card-row::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background: #272727;
+}
+
+.card-row::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.card-row::-webkit-scrollbar-thumb {
+    background-color: #1DB954;
+    border-radius: 5px;
+}
+
+.card-row::-webkit-scrollbar-thumb:hover {
+    background-color: #1ED760;
+}
+
+.card {
+    cursor: pointer;
+    /* Existing styles... */
+    position: relative;
+    flex: 0 0 auto;
+    transition: transform 0.3s ease;
+    margin-right: 50px;
+    width: 200px;
+    /* Adjust the width of each card as needed */
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+}
+
+.card::before {
+    content: "Add +";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 128, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+.card h3 {
+    position: absolute;
+    top: -30px;
+    width: 100%;
+    left: 0;
+    text-align: center;
+    font-size: 12px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    color: white;
+    white-space: nowrap;
+}
+
+.card:hover::before {
+    opacity: 1;
+    background-color: #1DB954cc;
+}
+
+.card.active {
+    transform: scale(1.1);
+}
+
+.card.active::before {
+    opacity: 1;
+    background-color: #1DB954cc;
+}
+
+
+.notification {
+    position: fixed;
+    top: 20px;
+    right: -1000px;
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: right 0.3s ease-in-out;
+    font-size: 14px;
+    z-index: 4;
+    color: #333;
+}
+
+.notification.open {
+    right: 20px;
+}
+
+.message {
+    display: block;
+}
+
+.close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #777;
+}
+
+.close:hover {
+    color: #333;
+}
