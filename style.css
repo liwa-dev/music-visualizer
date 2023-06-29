@@ -12,6 +12,7 @@ body {
     font-weight: 800;
     overflow: hidden;
     background: url(imgs/bg2.png);
+    background-size: cover;
 }
 
 .input-search {
