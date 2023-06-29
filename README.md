@@ -29,7 +29,7 @@
 - JavaScript
 
 ## Demo
-Check out the live demo of the Music Player: [Music Player Demo](https://your-demo-url.com)
+Check out the live demo of the Music Player: [Music Player Demo](https://liwa-dev.github.io/music-visualizer/)
 
 ## Usage
 1. Clone the repository: git clone https://github.com/liwa-dev/music-visualizer.git.
