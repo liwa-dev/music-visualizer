@@ -28,7 +28,7 @@ body {
 
 .input-search input {
     padding: 8px;
-    width: 300px;
+    width: 290px;
 }
 
 .input-search i {
@@ -444,11 +444,20 @@ body {
 
 
 @media only screen and (max-width: 600px) {
-    .window2 {
-        width: 90%;
-        height: 30%;
+    .input-search input {
+        width: 200px;
+    }
+    .window {
+        width: 323px;
+    }
+
+  }
+  @media only screen and (max-width: 280px) {
+    .window {
+        width: 253px;
     }
   }
+
 
 
 
