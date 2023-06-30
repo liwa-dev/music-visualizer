@@ -33,7 +33,7 @@ Check out the live demo of the Music Player: [Music Player Demo](https://liwa-de
 
 ## Usage
 1. Clone the repository: git clone https://github.com/liwa-dev/music-visualizer.git.
-2. Open the index.html file in your preferred web browser (preferably on a server).
+2. Open the index.html file / if doesn't work then run it on web server.
 3. Search for your favorite music.
 4. Enjoy listening to your music by selecting a playlist or shuffling songs while displaying the visualizer.
 
